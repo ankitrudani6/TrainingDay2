@@ -1,0 +1,138 @@
+<!-- Create Horizontal menu. Menu item will Home, AboutUs, ContactUS. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML</title>
+  <link rel="stylesheet" href="/Bootstrap/project/project4/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .content-wrapper a {
+      margin: 10px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .content-wrapper a:hover {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar" aria-label="sidebar">
+      <div class="sidebar-header">
+        <h3>RadixWeb Training</h3>
+      </div>
+      <ul class="list-unstyled components">
+        <p>HTML Tasks</p>
+        <li>
+          <a href="#module1" data-bs-toggle="collapse" data-bs-target="#module1" aria-controls="module1"
+            aria-expanded="false" aria-label="Toggle navigation 1" class="dropdown-toggle">Module1</a>
+          <ul class="collapse list-unstyled" id="module1">
+            <li>
+              <a href="#assignment1" data-bs-toggle="collapse" data-bs-target="#assignment1" aria-controls="assignment1"
+                aria-expanded="false" aria-label="Toggle navigation 1" class="dropdown-toggle">Assignment</a>
+              <ul class="collapse list-unstyled" id="assignment1">
+                <li><a href="/HTML/Module1/Assignment/employee_form.html">Employee Form</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#practice1" data-bs-toggle="collapse" data-bs-target="#practice1" aria-controls="practice1"
+                aria-expanded="false" aria-label="Toggle navigation 1" class="dropdown-toggle">Practice</a>
+              <ul class="collapse list-unstyled" id="practice1">
+                <li><a href="/HTML/Module1/Practice/article.html">Article</a></li>
+                <li><a href="/HTML/Module1/Practice/horizonatal-menu.html">Horizonatal Menu</a></li>
+                <li><a href="/HTML/Module1/Practice/login.html">Login</a></li>
+                <li><a href="/HTML/Module1/Practice/ordered-unordered-list.html">Order-unorder list</a></li>
+                <li><a href="/HTML/Module1/Practice/student-report-card.html">Student Report Card</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#module2" data-bs-toggle="collapse" data-bs-target="#module2" aria-controls="module2"
+            aria-expanded="false" aria-label="Toggle navigation 1" class="dropdown-toggle">Module2</a>
+          <ul class="collapse list-unstyled" id="module2">
+            <li>
+              <a href="#assignment2" data-bs-toggle="collapse" data-bs-target="#assignment2" aria-controls="assignment2"
+                aria-expanded="false" aria-label="Toggle navigation 1" class="dropdown-toggle">Assignment</a>
+              <ul class="collapse list-unstyled" id="assignment2">
+                <li><a href="/HTML/Module2/Assignment/index.html" target="_blank">Resume</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light mb-1" aria-label="navbar">
+        <a class="navbar-brand" href="/index.html"><img src="/src/download.png" height="40" width="42" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/HTML/index.html">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/CSS/index.html">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/bootstrap.index.html">Bootstrap</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/TailwindCSS/index.html">Tailwind CSS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/JavaScript/index.html">JavaScript</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/JQuery/index.html">jQuery</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="sidebarToggleBtn">
+        <button type="button" id="sidebarCollapse" class="btn">
+          <em class="fa fa-align-justify"></em>
+        </button>
+      </div>
+      <div class="content-wrapper">
+        <header>
+          <h1>Horizontal Menu</h1>
+        </header>
+        <hr>
+        <nav aria-label="content-nav">
+          <p>
+            <a href="home">Home</a>
+            <a href="AboutUs">AboutUs</a>
+            <a href="ContactUS">ContactUS</a>
+          </p>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="/node_modules/jquery/dist/jquery.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#sidebarCollapse").on('click', function () {
+        $("#sidebar").toggleClass('active');
+      })
+    })
+  </script>
+  <script src="myscript.js"></script>
+</body>
+
+</html>
